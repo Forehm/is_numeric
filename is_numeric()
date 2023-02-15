@@ -13,7 +13,6 @@ bool is_numeric(std::string str)
 			return false;
 		}
 	}
-
 	return true;
 }
 
