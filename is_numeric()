@@ -4,21 +4,16 @@
 
 bool is_numeric(std::string str)
 {
-	char arr[10] = { '0','1','2','3','4','5','6','7','8','9' };
+	std::set<char> appropriate_symbols = { '0','1','2','3','4','5','6','7','8','9' };
 
-	for (int i = 0; i < str.size(); ++i)
+	for (const char& symbol : str)
 	{
-		for (int j = 0; j < 10; ++j)
+		if (appropriate_symbols.count(symbol) == 0)
 		{
-			if (str[i] == arr[j])
-			{
-				break;
-			}
-			if (str[i] != arr[j] && j == 9)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
+
 	return true;
 }
+
