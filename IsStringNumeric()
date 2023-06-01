@@ -4,7 +4,7 @@ bool IsStringNumeric(const std::string& str)
 
 	for (const char& symbol : str)
 	{
-		if (!appropriate_symbols.count(symbol))
+		if (appropriate_symbols.count(symbol) == 0)
 		{
 			return false;
 		}
