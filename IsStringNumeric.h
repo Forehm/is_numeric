@@ -10,6 +10,7 @@ bool IsStringNumeric(const std::string& str)
 
 	for (const char& symbol : str)
 	{
+  counter_of_dots += symbol == '.'? 1 : 0;
 		if (appropriate_symbols.count(symbol) == 0)
 		{
 			return false;
