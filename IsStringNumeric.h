@@ -3,6 +3,7 @@
 #include <string>
 
 
+
 bool IsStringNumeric(const std::string& str) 
 {
  size_t counter_of_dots = 0;
